@@ -1,2 +1,0 @@
-# ImoocMail
-vue+mongoDB+node
