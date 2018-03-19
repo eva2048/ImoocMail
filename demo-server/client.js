@@ -1,0 +1,15 @@
+let https=require('https');
+let util=require('util');
+
+ https.get('https://www.imooc.com/u/loading',function(res){
+ 	let data='';
+
+ 	res.on("data",function(chunk){
+ 		data+=chunk;
+ 	});
+ 	
+ 	res.on("end",function(){
+ 		let result=JSON.parse(data);
+ 		console.log("result:"+util.inspect(result));
+ 	})
+ })
